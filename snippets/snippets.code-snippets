@@ -1,0 +1,51 @@
+{
+    "Godot setup Class": {
+		"prefix": "gdclass",
+		"body": [
+			"class $1 : public $2 {",
+			"\tGDCLASS($1,$2);",
+			"",
+			"\tprivate:",
+			"\t$0",
+			"\tprotected:",
+			"\tstatic void _bind_methods();",
+			"\tpublic:",
+			"",
+			"};"
+		],
+		"description": "setup GDClass"
+	},
+	"Godot bind variable":{
+		"prefix": "gdbindvar",
+		"body": [
+			"ClassDB::bind_method(D_METHOD(\"get_$2\"), &$1::get_$2);",
+			"ClassDB::bind_method(D_METHOD(\"set_$2\",\"value\"), &$1::set_$2);",
+			"ADD_PROPERTY(PropertyInfo(Variant::$3, \"$2\"), \"set_$2\", \"get_$2\");"
+		]
+	},
+	"Godot Standard Setget":{
+		"prefix": "gdsetget",
+		"body": [
+			"$1 $2::get_$3() {",
+			"\treturn $3;",
+			"}",
+			"",
+			"void $2::set_$3($1 value) {",
+			"\t$3 = value;",
+			"}"
+		]
+	},
+	"Godot header setget":{
+		"prefix": "gdhsg",
+		"body": [
+			"$2 get_$1();",
+			"void set_$1($2 value);"
+		]	
+	},
+	"Godot bind method":{
+		"prefix": "gdbm",
+		"body": [
+			"ClassDB::bind_method(D_METHOD(\"$2\"$0),&$1::$2);"
+		]
+	}
+}

@@ -1,0 +1,20 @@
+{
+  "name": "godot-gdextention-c---snippets",
+  "displayName": "godot gdextention C++ snippets",
+  "description": "Lots of useful snippets for gdextension programming",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.92.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "cpp",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  }
+}
