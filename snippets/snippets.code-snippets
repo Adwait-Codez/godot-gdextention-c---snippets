@@ -21,7 +21,8 @@
 			"ClassDB::bind_method(D_METHOD(\"get_$2\"), &$1::get_$2);",
 			"ClassDB::bind_method(D_METHOD(\"set_$2\",\"value\"), &$1::set_$2);",
 			"ADD_PROPERTY(PropertyInfo(Variant::$3, \"$2\"), \"set_$2\", \"get_$2\");"
-		]
+		],
+		"description": "Bind a godot property"
 	},
 	"Godot Standard Setget":{
 		"prefix": "gdsetget",
@@ -33,19 +34,22 @@
 			"void $2::set_$3($1 value) {",
 			"\t$3 = value;",
 			"}"
-		]
+		],
+		"description": "Creates standard setters and getters"
 	},
 	"Godot header setget":{
 		"prefix": "gdhsg",
 		"body": [
 			"$2 get_$1();",
 			"void set_$1($2 value);"
-		]	
+		],
+		"description": "create setget headers"	
 	},
 	"Godot bind method":{
 		"prefix": "gdbm",
 		"body": [
 			"ClassDB::bind_method(D_METHOD(\"$2\"$0),&$1::$2);"
-		]
+		],
+		"description": "Create a method binder"
 	}
 }
