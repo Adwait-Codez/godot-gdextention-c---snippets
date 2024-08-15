@@ -1,9 +1,10 @@
 {
   "name": "godot-gdextention-c---snippets",
   "publisher": "ClickyClicker",
+  "icon": "icon.png",
   "displayName": "godot gdextention C++ snippets",
   "description": "Lots of useful snippets for gdextension programming",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "repository": {"url": "https://github.com/Adwait-Codez/godot-gdextention-c---snippets"},
   "engines": {
     "vscode": "^1.92.0"
