@@ -1,6 +1,6 @@
-# godot-gdextention-c---snippets README
+# godot gdextention c++ snippets README
 
-This is the README for "godot-gdextention-c---snippets".
+This is the README for "godot gdextention c++ snippets".
 
 ## Features
 
@@ -20,3 +20,7 @@ GDextention C++ snippents for common boilerplate code
 2. Input
 3. Process
 4. Physics
+
+# Scons Build File Snipet
+
+Quickly get a Working SConstruct file with GodotBldNormal
