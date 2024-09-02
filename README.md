@@ -21,6 +21,6 @@ GDextention C++ snippents for common boilerplate code
 3. Process
 4. Physics
 
-# Scons Build File Snipet
+# Scons Build File Snippet
 
 Quickly get a Working SConstruct file with GodotBldNormal

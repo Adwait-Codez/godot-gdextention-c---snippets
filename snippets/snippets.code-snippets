@@ -1,5 +1,55 @@
 {
-    "Godot setup Class": {
+    "Godot Register types cpp":{
+		"prefix": "gdregistertypescpp",
+		"body": [
+			"#include \"register_types.h\"",
+			"",
+			"#include <gdextension_interface.h>",
+			"",		
+			"#include <godot_cpp/core/class_db.hpp>",
+			"#include <godot_cpp/core/defs.hpp>",
+			"#include <godot_cpp/godot.hpp>",
+			"",
+			"using namespace godot;",
+			"",
+			"void initialize_example_module(ModuleInitializationLevel p_level) {",
+			"\tif (p_level != MODULE_INITIALIZATION_LEVEL_SCENE) return;",
+			"}",
+			"",
+			"void uninitialize_example_module(ModuleInitializationLevel p_level) {",
+			"\tif (p_level != MODULE_INITIALIZATION_LEVEL_SCENE) return;",
+			"}",
+			"",
+			"extern \"C\" {",
+			"GDExtensionBool GDE_EXPORT example_library_init(GDExtensionInterfaceGetProcAddress p_get_proc_address, GDExtensionClassLibraryPtr p_library, GDExtensionInitialization *r_initialization) {",
+			"\tgodot::GDExtensionBinding::InitObject init_obj(p_get_proc_address, p_library, r_initialization);",
+			"",
+			"\tinit_obj.register_initializer(initialize_example_module);",
+			"\tinit_obj.register_terminator(uninitialize_example_module);",
+			"\tinit_obj.set_minimum_library_initialization_level(MODULE_INITIALIZATION_LEVEL_SCENE);",
+			"",
+			"\treturn init_obj.init();",
+			"}",
+			"}"
+		]
+	},
+	"Godot register types h":{
+		"prefix": "gdregistertypesh",
+		"body": [
+			"#ifndef EXAMPLE_REGISTER_TYPES_H",
+			"#define EXAMPLE_REGISTER_TYPES_H",
+			"",
+			"#include <godot_cpp/core/class_db.hpp>",
+			"",
+			"using namespace godot;",
+			"",
+			"void initialize_example_module(ModuleInitializationLevel p_level);",
+			"void uninitialize_example_module(ModuleInitializationLevel p_level);",
+			"",
+			"#endif"
+		]
+	},
+	"Godot setup Class": {
 		"prefix": "gdclass",
 		"body": [
 			"class $1 : public $2 {",
@@ -52,6 +102,14 @@
 		],
 		"description": "Create a method binder"
 	},
+	"EnterTree Function":{
+		"prefix": "EnterTree",
+		"body": "virtual void _enter_tree() override;"
+	},
+	"ExitTree Function":{
+		"prefix": "ExitTree",
+		"body": "virtual void _exit_tree() override;"
+	},
 	"Ready Function":{
 		"prefix": "Ready",
 		"body": "virtual void _ready() override;"
@@ -62,10 +120,10 @@
 	},
 	"Process Function":{
 		"prefix": "Process",
-		"body": "virtual void _process(double delta) override;"
+		"body": "virtual void _process(double p_delta) override;"
 	},
 	"PhysicsProcess Function":{
 		"prefix": "Physics",
-		"body": "virtual void _physics_process(double delta) override;"
+		"body": "virtual void _physics_process(double p_delta) override;"
 	}
 }

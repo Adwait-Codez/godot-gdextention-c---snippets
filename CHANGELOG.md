@@ -12,3 +12,7 @@ updated readme and snippet discriptions
 ## [0.1.4]
 
 Added Scons Builder Snippet.
+
+## [0.1.5]
+
+Added enter_tree and exit_tree snippets
