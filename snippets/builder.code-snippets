@@ -55,7 +55,7 @@
     "\tcpp_properties = {",
         "\t\"configurations\": [",
             "\t{",
-                "\t\"name\": \"Win32\",q",
+                "\t\"name\": \"Win32\",",
                 "\t\"includePath\": [det(path) for path in env['CPPPATH']],",
                 "\t\"defines\":[det(define) for define in env['CPPDEFINES']],  # Preprocessor definitions",
                 "\t\"compilerPath\": env['CXX'],   # Compiler path",
