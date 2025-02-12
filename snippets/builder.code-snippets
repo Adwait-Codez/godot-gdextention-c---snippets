@@ -4,6 +4,7 @@
         "body": ["#!/usr/bin/env python",
 "import os",
 "import sys",
+"import Scons",
 "",
 "env = SConscript('godot-cpp/SConstruct')",
 "",
