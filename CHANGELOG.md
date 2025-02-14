@@ -16,3 +16,7 @@ Added Scons Builder Snippet.
 ## [0.1.5]
 
 Added enter_tree and exit_tree snippets
+
+## [0.1.7]
+
+fixed Builder Snippet
