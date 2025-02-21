@@ -4,7 +4,7 @@
   "icon": "icon.png",
   "displayName": "godot gdextention C++ snippets",
   "description": "Lots of useful snippets for gdextension programming",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "repository": {"url": "https://github.com/Adwait-Codez/godot-gdextention-c---snippets"},
   "engines": {
     "vscode": "^1.92.0"
